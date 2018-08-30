@@ -10,7 +10,7 @@ This vagrant use [ubuntu/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trus
   You need to place your projects in `projects` directory. This directory is synced with `/usr/share/nginx/html` directory in the virtual machine. 
   This project folder also contain a `config` folder which is used during the provisioning. 
 
-This vagrant box is configured to use '1024 mb' of RAM and 1 CPU core. You can change ths configuration from Vagrantfile.
+This vagrant box is configured to use '2048 mb' of RAM and 4 CPU core. You can change ths configuration from Vagrantfile.
  
 ## Included packages
 
