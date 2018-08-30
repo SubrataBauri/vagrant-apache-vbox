@@ -16,18 +16,17 @@ end
   config.vm.hostname = "dev.domainname.com"
 
   # Setup synced folder
-    config.vm.synced_folder "projects/", "/usr/share/nginx/html", group: "www-data", owner: "vagrant", :mount_options => ['dmode=775', 'fmode=775']
+    config.vm.synced_folder "projects/", "/var/www/html", group: "www-data", owner: "vagrant", :mount_options => ['dmode=775', 'fmode=775']
 
   # CUSTOMIZATION
    config.vm.provider "virtualbox" do |vb|
 
-     vb.name = "ubuntuspace"
+     vb.name = "vagrant-apache-vbox"
   
      # Memory on the VM (You can change this and do 'vagrant up' to apply the memory changes) : 
      vb.memory = "2048"
      vb.cpus = 4
    end
-
 
   # PROVISION
    # Shell provisioning
