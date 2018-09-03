@@ -1,9 +1,9 @@
 
 Vagrant.configure(2) do |config|
 
-unless Vagrant.has_plugin?("vagrant-vbguest")
-  raise 'vagrant-vbguest plugin is not installed!  Please run the following command: vagrant plugin install vagrant-vbguest'
-end
+#unless Vagrant.has_plugin?("vagrant-vbguest")
+#  raise 'vagrant-vbguest plugin is not installed!  Please run the following command: vagrant plugin install vagrant-vbguest'
+#end
 
   required_plugins = %w( vagrant-vbguest vagrant-disksize )
   _retry = false
