@@ -5,7 +5,8 @@ Vagrant.configure(2) do |config|
 #  raise 'vagrant-vbguest plugin is not installed!  Please run the following command: vagrant plugin install vagrant-vbguest'
 #end
 
-  required_plugins = %w( vagrant-vbguest vagrant-disksize )
+  #required_plugins = %w( vagrant-vbguest vagrant-disksize )
+  required_plugins = %w( vagrant-vbguest )
   _retry = false
   required_plugins.each do |plugin|
       unless Vagrant.has_plugin? plugin
@@ -16,7 +17,7 @@ Vagrant.configure(2) do |config|
 
   # Specify the base box
   config.vm.box = "ubuntu/trusty64"
-  config.disksize.size = "20GB"
+  #config.disksize.size = "20GB"
 
   # Setup port forwarding
   #config.vm.network "forwarded_port", guest: 22, host: 1022, host_ip: "127.0.0.1", id: 'ssh'
