@@ -85,4 +85,29 @@ sudo apt install php-memcached -y > /dev/null
 sudo service memcached restart
 sudo service php7.1-fpm restart
 
+echo -e "\e[96m Begin silent install phpMyAdmin \e[39m"
+
+# Add phpMyAdmin PPA for latest version
+# Warning!!! Don't add this PPA if you are running php v5.6
+sudo add-apt-repository -y ppa:nijel/phpmyadmin
+sudo apt-get update
+
+echo -e "\e[93m User: root, Password: root \e[39m"
+# Set non-interactive mode
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'﻿
+
+sudo apt-get -y install phpmyadmin
+
+# Restart apache server
+sudo service apache2 restart
+
+# Clean up
+sudo apt-get clean
+
+echo -e "\e[92m phpMyAdmin installed successfully \e[39m"
+
 echo "Finished provisioning."
