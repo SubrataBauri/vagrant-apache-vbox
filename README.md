@@ -39,10 +39,10 @@ The following dependencies are installed using apt-get as they are required to i
 To use this Ubuntuspace vagrant, clone this github repo 
 
    ### With https
-    $ git clone https://github.com/SubrataBauri/vagrant-nginx-vbox .git
+    $ git clone https://github.com/SubrataBauri/vagrant-apache-vbox.git
    
    ### With ssh
-       $ git clone git@github.com:SubrataBauri/vagrant-nginx-vbox .git
+       $ git clone git@github.com:SubrataBauri/vagrant-apache-vbox.git
        
 to your mac/pc/linux.  When clone is complete, go to the `vagrant-nginx-vbox ` and now you are ready to use your Virtual Machine.
 
