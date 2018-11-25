@@ -23,7 +23,7 @@ echo "Installing PHP"
 sudo apt-get install php7.1 -y > /dev/null
 
 echo "Installing PHP extensions"
-sudo apt-get install php7.1-common php7.1-dev php5-cli php7.1-fpm -y > /dev/null
+sudo apt-get install php7.1-common php7.1-dev php7.1-cli php7.1-fpm -y > /dev/null
 sudo apt-get install -y libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring -y > /dev/null
 sudo apt-get install -y php7.1-gd php7.1-intl php7.1-xml php7.1-mysql -y > /dev/null
 sudo apt-get install -y php7.1-mcrypt php7.1-zip php7.1-bcmath php7.1-xdebug -y > /dev/null
